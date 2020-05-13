@@ -1,0 +1,283 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Load files · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    PySpark
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.1" data-path="load_files.html">
+            
+                <a href="load_files.html">
+            
+                    
+                    Load files
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Load files</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h5 id="what-is--sparkread-">What is  <code>spark.read()</code> ?</h5>
+<p><em>class</em> <code>pyspark.sql.DataFrameReader</code>(<em>spark</em>)<a href="https://spark.apache.org/docs/latest/api/python/_modules/pyspark/sql/readwriter.html#DataFrameReader" target="_blank">[source]</a></p>
+<p>Interface used to load a <a href="https://spark.apache.org/docs/latest/api/python/pyspark.sql.html#pyspark.sql.DataFrame" target="_blank"><code>DataFrame</code></a> from external storage systems (e.g. file systems, key-value stores, etc). Use <code>spark.read()</code> to access this.</p>
+<h5 id="load-text-file">Load text file</h5>
+<ol>
+<li><p><a href="https://spark.apache.org/docs/latest/api/python/_modules/pyspark/sql/readwriter.html#DataFrameReader.text" target="_blank"><strong>text</strong>(<em>paths</em>, <em>wholetext=False</em>, <em>lineSep=None</em>)</a> </p>
+<p>&#x76EE;&#x524D;&#x652F;&#x6301;3&#x4E2A;&#x53C2;&#x6570;&#xFF0C;<em>wholetext</em>&#x53EF;&#x5C06;&#x6587;&#x672C;&#x5BFC;&#x5165;&#x6210;&#x4E00;&#x4E2A;cell</p>
+</li>
+</ol>
+<pre><code class="lang-python">df = spark.read.text(<span class="hljs-string">&quot;hdfs:///data/msd/tasteprofile/mismatches/sid_msimatches.txt&quot;</span>)
+</code></pre>
+<ol>
+<li><p>format(&quot;text&quot;).option().load()</p>
+<p>Data sources are specified by their fully qualified name (i.e., <code>org.apache.spark.sql.parquet</code>), but for built-in sources you can also use their short names (<code>json</code>, <code>parquet</code>, <code>jdbc</code>, <code>orc</code>, <code>libsvm</code>, <code>csv</code>, <code>text</code>)</p>
+</li>
+</ol>
+<pre><code class="lang-python">df = (
+    spark.read.format(<span class="hljs-string">&quot;text&quot;</span>)
+    .option(<span class="hljs-string">&quot;delimiter&quot;</span>, <span class="hljs-string">&quot; &quot;</span>)
+    .load(<span class="hljs-string">&quot;hdfs:///data/msd/tasteprofile/mismatches/sid_msimatches.txt&quot;</span>)
+</code></pre>
+<p>&#x5B98;&#x65B9;&#x6587;&#x6863;&#x4E2D;&#x6709;&#x4E9B;option&#x4E0D;&#x5168;&#xFF0C;&#x6BD4;&#x5982;<code>.option(&quot;recursiveFileLookup&quot;, &quot;true&quot;)</code>&#x3002;&#x66F4;&#x591A;&#x4F8B;&#x5B50;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><a href="https://spark.apache.org/docs/latest/sql-data-sources-load-save-functions.html" target="_blank">Generic Load/Save Functions</a></p>
+<p><a href="https://github.com/apache/spark/blob/master/examples/src/main/python/sql/datasource.py" target="_blank">Find full example code in the Spark repo</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev navigation-unique" aria-label="Previous page: PySpark">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Load files","level":"1.2.1","depth":2,"previous":{"title":"PySpark","level":"1.2","depth":1,"path":"pyspark/README.md","ref":"pyspark/README.md","articles":[{"title":"Load files","level":"1.2.1","depth":2,"path":"pyspark/load_files.md","ref":"pyspark/load_files.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pyspark/load_files.md","mtime":"2020-05-13T21:45:08.565Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-13T21:45:43.292Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
