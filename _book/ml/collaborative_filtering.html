@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>PySpark · GitBook</title>
+        <title>Collaborative_filtering · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="load_files.html" />
+    <link rel="next" href="metrics.html" />
     
-    
-    <link rel="prev" href="../" />
     
 
     </head>
@@ -102,9 +100,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2" data-path="./">
+        <li class="chapter " data-level="1.2" data-path="../pyspark/">
             
-                <a href="./">
+                <a href="../pyspark/">
             
                     
                     PySpark
@@ -116,9 +114,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="load_files.html">
+        <li class="chapter " data-level="1.2.1" data-path="../pyspark/load_files.html">
             
-                <a href="load_files.html">
+                <a href="../pyspark/load_files.html">
             
                     
                     Load files
@@ -129,9 +127,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="create_dataframe.html">
+        <li class="chapter " data-level="1.2.2" data-path="../pyspark/create_dataframe.html">
             
-                <a href="create_dataframe.html">
+                <a href="../pyspark/create_dataframe.html">
             
                     
                     Create Dataframe
@@ -142,9 +140,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="join.html">
+        <li class="chapter " data-level="1.2.3" data-path="../pyspark/join.html">
             
-                <a href="join.html">
+                <a href="../pyspark/join.html">
             
                     
                     Join
@@ -155,9 +153,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4" data-path="python_trick.html">
+        <li class="chapter " data-level="1.2.4" data-path="../pyspark/python_trick.html">
             
-                <a href="python_trick.html">
+                <a href="../pyspark/python_trick.html">
             
                     
                     Python Tricks
@@ -232,9 +230,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="../ml/collaborative_filtering.html">
+        <li class="chapter active" data-level="1.4.1" data-path="collaborative_filtering.html">
             
-                <a href="../ml/collaborative_filtering.html">
+                <a href="collaborative_filtering.html">
             
                     
                     Collaborative_filtering
@@ -245,9 +243,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="../ml/metrics.html">
+        <li class="chapter " data-level="1.4.2" data-path="metrics.html">
             
-                <a href="../ml/metrics.html">
+                <a href="metrics.html">
             
                     
                     Metrics
@@ -338,7 +336,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >PySpark</a>
+        <a href=".." >Collaborative_filtering</a>
     </h1>
 </div>
 
@@ -353,14 +351,17 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="documents">Documents</h3>
-<ul>
-<li><a href="https://spark.apache.org/docs/latest/api/python/index.html" target="_blank">Spark Python API Docs!</a><ul>
-<li><a href="https://spark.apache.org/docs/latest/api/python/pyspark.sql.html" target="_blank">pyspark.sql module</a></li>
-</ul>
-</li>
-</ul>
-<h3 id="blog-posts">Blog posts</h3>
+                                <h4 id="sparse">Sparse</h4>
+<p>Suppose data set is splited into 80/20</p>
+<p><img src="../Users/neil/Library/Application Support/typora-user-images/image-20200515083707316.png" alt="image-20200515083707316"></p>
+<p><img src="../Users/neil/Library/Application Support/typora-user-images/image-20200515083720095.png" alt="image-20200515083720095"></p>
+<p>sparse rate of test and the whole data</p>
+<p><img src="../Users/neil/Library/Application Support/typora-user-images/image-20200515083828342.png" alt="image-20200515083828342"></p>
+<p>Explicit feedback: predicting &quot;rating&quot;</p>
+<p>Not a problem in Sparsy matrix</p>
+<p><img src="../Users/neil/Library/Application Support/typora-user-images/image-20200515084557238.png" alt="image-20200515084557238"></p>
+<p>!!! Implicit feedback: recommandation &quot;movie_id&quot;, ranking</p>
+<p>Using Ranking Metrics</p>
 
                                 
                                 </section>
@@ -388,12 +389,8 @@
 
             
                 
-                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Introduction">
-                    <i class="fa fa-angle-left"></i>
-                </a>
                 
-                
-                <a href="load_files.html" class="navigation navigation-next " aria-label="Next page: Load files">
+                <a href="metrics.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Metrics">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -404,7 +401,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"PySpark","level":"1.2","depth":1,"next":{"title":"Load files","level":"1.2.1","depth":2,"path":"pyspark/load_files.md","ref":"pyspark/load_files.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pyspark/README.md","mtime":"2020-05-13T22:32:40.279Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-15T09:29:17.960Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Collaborative_filtering","level":"1.4.1","depth":2,"next":{"title":"Metrics","level":"1.4.2","depth":2,"path":"ml/metrics.md","ref":"ml/metrics.md","articles":[]},"previous":{"title":"Machine Learning","level":"1.4","depth":1,"ref":"","articles":[{"title":"Collaborative_filtering","level":"1.4.1","depth":2,"path":"ml/collaborative_filtering.md","ref":"ml/collaborative_filtering.md","articles":[]},{"title":"Metrics","level":"1.4.2","depth":2,"path":"ml/metrics.md","ref":"ml/metrics.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ml/collaborative_filtering.md","mtime":"2020-05-14T20:54:55.465Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-15T09:29:17.960Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

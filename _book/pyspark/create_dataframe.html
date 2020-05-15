@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>PySpark · GitBook</title>
+        <title>Create Dataframe · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="load_files.html" />
+    <link rel="next" href="join.html" />
     
     
-    <link rel="prev" href="../" />
+    <link rel="prev" href="load_files.html" />
     
 
     </head>
@@ -102,7 +102,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2" data-path="./">
+        <li class="chapter " data-level="1.2" data-path="./">
             
                 <a href="./">
             
@@ -129,7 +129,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="create_dataframe.html">
+        <li class="chapter active" data-level="1.2.2" data-path="create_dataframe.html">
             
                 <a href="create_dataframe.html">
             
@@ -338,7 +338,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >PySpark</a>
+        <a href=".." >Create Dataframe</a>
     </h1>
 </div>
 
@@ -353,14 +353,52 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="documents">Documents</h3>
+                                <h4 id="create-rdd">Create RDD</h4>
 <ul>
-<li><a href="https://spark.apache.org/docs/latest/api/python/index.html" target="_blank">Spark Python API Docs!</a><ul>
-<li><a href="https://spark.apache.org/docs/latest/api/python/pyspark.sql.html" target="_blank">pyspark.sql module</a></li>
+<li>The data should  be a [([], []), ([], []), ([], []), ...]<ul>
+<li>a list (df) holds tuples (rows)</li>
+<li>tuple (a row) hold elements (cells/columns)</li>
 </ul>
 </li>
 </ul>
-<h3 id="blog-posts">Blog posts</h3>
+<p>A list = [</p>
+<p>&#x200B;    ([r11], [r12]),</p>
+<p>&#x200B;    ([r21], [r22]),</p>
+<p>&#x200B;    ...</p>
+<p>]</p>
+<ul>
+<li>and serialize the list:</li>
+</ul>
+<p>sc.parallelize(A list)</p>
+<pre><code class="lang-python">In [<span class="hljs-number">1</span>]: predictionAndLabels = sc.parallelize([
+   ...: ...     ([<span class="hljs-number">1</span>, <span class="hljs-number">6</span>, <span class="hljs-number">2</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">3</span>, <span class="hljs-number">9</span>, <span class="hljs-number">10</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]),
+   ...: ...     ([<span class="hljs-number">4</span>, <span class="hljs-number">1</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">2</span>, <span class="hljs-number">7</span>, <span class="hljs-number">3</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">10</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]),
+   ...: ...     ([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>], [])])
+
+In [<span class="hljs-number">2</span>]: predictionAndLabels
+Out[<span class="hljs-number">2</span>]: ParallelCollectionRDD[<span class="hljs-number">0</span>] at parallelize at PythonRDD.scala:<span class="hljs-number">195</span>
+
+In [<span class="hljs-number">3</span>]: predictionAndLabels.collect()
+Out[<span class="hljs-number">3</span>]:
+[([<span class="hljs-number">1</span>, <span class="hljs-number">6</span>, <span class="hljs-number">2</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">3</span>, <span class="hljs-number">9</span>, <span class="hljs-number">10</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]),
+ ([<span class="hljs-number">4</span>, <span class="hljs-number">1</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">2</span>, <span class="hljs-number">7</span>, <span class="hljs-number">3</span>, <span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">10</span>], [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]),
+ ([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>], [])]
+</code></pre>
+<h4 id="createdataframe-using-rdd">createDataFrame using RDD</h4>
+<pre><code class="lang-python">In [<span class="hljs-number">4</span>]: df = spark.createDataFrame(predictionAndLabels)
+
+In [<span class="hljs-number">5</span>]: df
+Out[<span class="hljs-number">5</span>]: DataFrame[_1: array&lt;bigint&gt;, _2: array&lt;bigint&gt;]
+
+In [<span class="hljs-number">6</span>]: df.show()
++--------------------+---------------+
+|                  _1|             _2|
++--------------------+---------------+
+|[<span class="hljs-number">1</span>, <span class="hljs-number">6</span>, <span class="hljs-number">2</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>, <span class="hljs-number">3.</span>..|[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]|
+|[<span class="hljs-number">4</span>, <span class="hljs-number">1</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">2</span>, <span class="hljs-number">7.</span>..|      [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]|
+|     [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]|             []|
++--------------------+---------------+
+</code></pre>
 
                                 
                                 </section>
@@ -388,12 +426,12 @@
 
             
                 
-                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                <a href="load_files.html" class="navigation navigation-prev " aria-label="Previous page: Load files">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="load_files.html" class="navigation navigation-next " aria-label="Next page: Load files">
+                <a href="join.html" class="navigation navigation-next " aria-label="Next page: Join">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -404,7 +442,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"PySpark","level":"1.2","depth":1,"next":{"title":"Load files","level":"1.2.1","depth":2,"path":"pyspark/load_files.md","ref":"pyspark/load_files.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pyspark/README.md","mtime":"2020-05-13T22:32:40.279Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-15T09:29:17.960Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Create Dataframe","level":"1.2.2","depth":2,"next":{"title":"Join","level":"1.2.3","depth":2,"path":"pyspark/join.md","ref":"pyspark/join.md","articles":[]},"previous":{"title":"Load files","level":"1.2.1","depth":2,"path":"pyspark/load_files.md","ref":"pyspark/load_files.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pyspark/create_dataframe.md","mtime":"2020-05-14T21:39:33.082Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-15T09:29:17.960Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
