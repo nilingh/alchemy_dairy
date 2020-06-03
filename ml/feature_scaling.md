@@ -21,4 +21,4 @@
 
 **Scaling to unit length**
 
-<img src="https://pic2.zhimg.com/50/v2-ca8f8c4e0c60572bc2f0ecce563f006e_hd.jpg" data-caption="" data-size="normal" data-rawwidth="89" data-rawheight="50" class="content_image" width="89"/>
+<img src="https://i.loli.net/2020/06/04/rtX9EHp61DNQenk.jpg" data-caption="" data-size="normal" data-rawwidth="89" data-rawheight="50" class="content_image" width="89"/>
