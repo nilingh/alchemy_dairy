@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Python Tricks · GitBook</title>
+        <title>Scaling · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,8 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="methods.html" />
     
-    <link rel="prev" href="join.html" />
+    
+    <link rel="prev" href="metrics.html" />
     
 
     </head>
@@ -100,9 +102,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="./">
+        <li class="chapter " data-level="1.2" data-path="../pyspark/">
             
-                <a href="./">
+                <a href="../pyspark/">
             
                     
                     PySpark
@@ -114,9 +116,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="load_files.html">
+        <li class="chapter " data-level="1.2.1" data-path="../pyspark/load_files.html">
             
-                <a href="load_files.html">
+                <a href="../pyspark/load_files.html">
             
                     
                     Load files
@@ -127,9 +129,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="create_dataframe.html">
+        <li class="chapter " data-level="1.2.2" data-path="../pyspark/create_dataframe.html">
             
-                <a href="create_dataframe.html">
+                <a href="../pyspark/create_dataframe.html">
             
                     
                     Create Dataframe
@@ -140,9 +142,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="join.html">
+        <li class="chapter " data-level="1.2.3" data-path="../pyspark/join.html">
             
-                <a href="join.html">
+                <a href="../pyspark/join.html">
             
                     
                     Join
@@ -153,9 +155,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.4" data-path="python_trick.html">
+        <li class="chapter " data-level="1.2.4" data-path="../pyspark/python_trick.html">
             
-                <a href="python_trick.html">
+                <a href="../pyspark/python_trick.html">
             
                     
                     Python Tricks
@@ -230,9 +232,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="../ml/collaborative_filtering.html">
+        <li class="chapter " data-level="1.4.1" data-path="collaborative_filtering.html">
             
-                <a href="../ml/collaborative_filtering.html">
+                <a href="collaborative_filtering.html">
             
                     
                     Collaborative_filtering
@@ -243,9 +245,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="../ml/metrics.html">
+        <li class="chapter " data-level="1.4.2" data-path="metrics.html">
             
-                <a href="../ml/metrics.html">
+                <a href="metrics.html">
             
                     
                     Metrics
@@ -256,9 +258,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="../ml/feature_scaling.html">
+        <li class="chapter active" data-level="1.4.3" data-path="feature_scaling.html">
             
-                <a href="../ml/feature_scaling.html">
+                <a href="feature_scaling.html">
             
                     
                     Scaling
@@ -269,9 +271,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.4" data-path="../ml/methods.html">
+        <li class="chapter " data-level="1.4.4" data-path="methods.html">
             
-                <a href="../ml/methods.html">
+                <a href="methods.html">
             
                     
                     Methods
@@ -282,9 +284,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.5" data-path="../ml/regularisation.html">
+        <li class="chapter " data-level="1.4.5" data-path="regularisation.html">
             
-                <a href="../ml/regularisation.html">
+                <a href="regularisation.html">
             
                     
                     Regularisation
@@ -309,9 +311,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.6.1" data-path="../ml/dl/notes_dl.html">
+        <li class="chapter " data-level="1.4.6.1" data-path="dl/notes_dl.html">
             
-                <a href="../ml/dl/notes_dl.html">
+                <a href="dl/notes_dl.html">
             
                     
                     Basic of Deep Learning
@@ -322,9 +324,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6.2" data-path="../ml/dl/keras.html">
+        <li class="chapter " data-level="1.4.6.2" data-path="dl/keras.html">
             
-                <a href="../ml/dl/keras.html">
+                <a href="dl/keras.html">
             
                     
                     Keras
@@ -420,7 +422,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Python Tricks</a>
+        <a href=".." >Scaling</a>
     </h1>
 </div>
 
@@ -435,8 +437,19 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h4 id="concatenate-strings">Concatenate strings</h4>
-<p><a href="https://www.jb51.net/article/149991.htm" target="_blank">Python&#x62FC;&#x63A5;&#x5B57;&#x7B26;&#x4E32;&#x7684;7&#x79CD;&#x65B9;&#x6CD5;&#x603B;&#x7ED3;</a></p>
+                                <h4 id="feature-scaling">Feature Scaling</h4>
+<p>&#x4F5C;&#x8005;&#xFF1A;&#x9F9A;&#x7131;
+&#x94FE;&#x63A5;&#xFF1A;<a href="https://www.zhihu.com/question/20467170/answer/392949674" target="_blank">https://www.zhihu.com/question/20467170/answer/392949674</a>
+&#x6765;&#x6E90;&#xFF1A;&#x77E5;&#x4E4E;
+&#x8457;&#x4F5C;&#x6743;&#x5F52;&#x4F5C;&#x8005;&#x6240;&#x6709;&#x3002;&#x5546;&#x4E1A;&#x8F6C;&#x8F7D;&#x8BF7;&#x8054;&#x7CFB;&#x4F5C;&#x8005;&#x83B7;&#x5F97;&#x6388;&#x6743;&#xFF0C;&#x975E;&#x5546;&#x4E1A;&#x8F6C;&#x8F7D;&#x8BF7;&#x6CE8;&#x660E;&#x51FA;&#x5904;&#x3002;</p>
+<p><strong>Rescaling</strong></p>
+<p><img src="https://pic3.zhimg.com/50/v2-1874c0fd4801124ad29d6b2ff5d78d56_hd.jpg" data-caption="" data-size="normal" data-rawwidth="236" data-rawheight="79" data-default-watermark-src="https://pic4.zhimg.com/50/v2-575408e57fc4ce6d5c9f565efac34f70_hd.jpg" class="content_image" width="236"></p>
+<p><strong>Mean normalization</strong></p>
+<p><img src="https://pic4.zhimg.com/50/v2-1232fae014a02e150ed2b78e463a16ce_hd.jpg" data-caption="" data-size="normal" data-rawwidth="235" data-rawheight="75" data-default-watermark-src="https://pic3.zhimg.com/50/v2-fa2aad4069697e5339f0fb12b8834098_hd.jpg" class="content_image" width="235"></p>
+<p><strong>Standardization</strong></p>
+<p><img src="https://pic2.zhimg.com/50/v2-9734f7841b544443b591bfbf54a7f041_hd.jpg" data-caption="" data-size="normal" data-rawwidth="103" data-rawheight="45" class="content_image" width="103"></p>
+<p><strong>Scaling to unit length</strong></p>
+<p><img src="https://pic2.zhimg.com/50/v2-ca8f8c4e0c60572bc2f0ecce563f006e_hd.jpg" data-caption="" data-size="normal" data-rawwidth="89" data-rawheight="50" class="content_image" width="89"></p>
 
                                 
                                 </section>
@@ -464,10 +477,14 @@
 
             
                 
-                <a href="join.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Join">
+                <a href="metrics.html" class="navigation navigation-prev " aria-label="Previous page: Metrics">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="methods.html" class="navigation navigation-next " aria-label="Next page: Methods">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -476,7 +493,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Python Tricks","level":"1.2.4","depth":2,"next":{"title":"Python","level":"1.3","depth":1,"ref":"","articles":[{"title":"Concatenate","level":"1.3.1","depth":2,"path":"python/concatenate.md","ref":"python/concatenate.md","articles":[]},{"title":"String to Variable","level":"1.3.2","depth":2,"path":"python/string2var.md","ref":"python/string2var.md","articles":[]}]},"previous":{"title":"Join","level":"1.2.3","depth":2,"path":"pyspark/join.md","ref":"pyspark/join.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pyspark/python_trick.md","mtime":"2020-05-15T08:04:57.525Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-03T10:55:47.174Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Scaling","level":"1.4.3","depth":2,"next":{"title":"Methods","level":"1.4.4","depth":2,"path":"ml/methods.md","ref":"ml/methods.md","articles":[]},"previous":{"title":"Metrics","level":"1.4.2","depth":2,"path":"ml/metrics.md","ref":"ml/metrics.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ml/feature_scaling.md","mtime":"2020-05-17T02:15:38.262Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-03T10:55:47.174Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

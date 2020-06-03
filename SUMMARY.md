@@ -12,6 +12,12 @@
 * Machine Learning
   * [Collaborative_filtering](ml/collaborative_filtering.md)
   * [Metrics](ml/metrics.md)
+  * [Scaling](ml/feature_scaling.md)
+  * [Methods](ml/methods.md)
+  * [Regularisation](ml/regularisation.md)
+  * Deep Learning
+    * [Basic of Deep Learning](ml/dl/notes_dl.md)
+    * [Keras](ml/dl/keras.md)
 * Shell
   * [Combo!](shell/combo.md)
   * [HDFS & Shell](shell/hdfs_shell.md)

@@ -1,0 +1,593 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Keras · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="notes_dl.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../pyspark/">
+            
+                <a href="../../pyspark/">
+            
+                    
+                    PySpark
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../pyspark/load_files.html">
+            
+                <a href="../../pyspark/load_files.html">
+            
+                    
+                    Load files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../pyspark/create_dataframe.html">
+            
+                <a href="../../pyspark/create_dataframe.html">
+            
+                    
+                    Create Dataframe
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../pyspark/join.html">
+            
+                <a href="../../pyspark/join.html">
+            
+                    
+                    Join
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../../pyspark/python_trick.html">
+            
+                <a href="../../pyspark/python_trick.html">
+            
+                    
+                    Python Tricks
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Python
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../python/concatenate.html">
+            
+                <a href="../../python/concatenate.html">
+            
+                    
+                    Concatenate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../python/string2var.html">
+            
+                <a href="../../python/string2var.html">
+            
+                    
+                    String to Variable
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    Machine Learning
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../collaborative_filtering.html">
+            
+                <a href="../collaborative_filtering.html">
+            
+                    
+                    Collaborative_filtering
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../metrics.html">
+            
+                <a href="../metrics.html">
+            
+                    
+                    Metrics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../feature_scaling.html">
+            
+                <a href="../feature_scaling.html">
+            
+                    
+                    Scaling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../methods.html">
+            
+                <a href="../methods.html">
+            
+                    
+                    Methods
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../regularisation.html">
+            
+                <a href="../regularisation.html">
+            
+                    
+                    Regularisation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" >
+            
+                <span>
+            
+                    
+                    Deep Learning
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.6.1" data-path="notes_dl.html">
+            
+                <a href="notes_dl.html">
+            
+                    
+                    Basic of Deep Learning
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.6.2" data-path="keras.html">
+            
+                <a href="keras.html">
+            
+                    
+                    Keras
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    Shell
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../shell/combo.html">
+            
+                <a href="../../shell/combo.html">
+            
+                    
+                    Combo!
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../shell/hdfs_shell.html">
+            
+                <a href="../../shell/hdfs_shell.html">
+            
+                    
+                    HDFS & Shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Keras</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="keras">Keras</h1>
+<p><img src="../../Users/neil/Library/Application Support/typora-user-images/image-20200521182632496.png" alt="image-20200521182632496"></p>
+<h3 id="example">Example</h3>
+<pre><code class="lang-python">X, y = make_moons(n_samples=<span class="hljs-number">1000</span>, noise=<span class="hljs-number">0.05</span>, random_state=<span class="hljs-number">0</span>)
+
+model = Sequential()
+model.add(Dense(<span class="hljs-number">4</span>, input_shape=(<span class="hljs-number">2</span>,), activation=<span class="hljs-string">&apos;tanh&apos;</span>))
+model.add(Dense(<span class="hljs-number">2</span>, activation=<span class="hljs-string">&apos;tanh&apos;</span>))
+model.add(Dense(<span class="hljs-number">1</span>, activation=<span class="hljs-string">&apos;sigmoid&apos;</span>))
+
+model.compile(Adam(lr=<span class="hljs-number">0.01</span>), <span class="hljs-string">&apos;binary_crossentropy&apos;</span>, metrics=[<span class="hljs-string">&apos;accuracy&apos;</span>])
+
+history = model.fit(X, y, verbose=<span class="hljs-number">0</span>, epochs=<span class="hljs-number">100</span>)
+
+plot_loss_accuracy(history)
+</code></pre>
+<h4 id="dense"><em>Dense</em>()</h4>
+<ul>
+<li>constructs a fully connected neural network layer</li>
+<li>automatically initializing the weights and biases randomly</li>
+<li>add several Dense layers one after another. The output of one layer becomes the input of the next</li>
+<li>arguments:<ul>
+<li><em>units</em>:  the number of nodes in this layer</li>
+<li><em>input_shape</em>: In this case, our input dimensionality is 2, the x and y coordinates. The input_shape parameter expects a vector</li>
+<li><em>activation</em>: The activation function is the <em>logistic</em> function, altenatively called as <em>sigmoid</em>.<ul>
+<li>relu, softmax, tanh</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="compile">compile()</h4>
+<ul>
+<li>compile the Keras model</li>
+<li>specifying the optimizer to use</li>
+<li>specifying the loss function to minimize</li>
+<li>arguments:<ul>
+<li><em>optimizer</em>: most of them based on gradient descent. </li>
+<li>lr: learning rate, depends on GD algorithm</li>
+<li><em>loss</em>: a binary 0/1 classifier, the loss function to minimize is <em>binary_crossentropy</em></li>
+<li><em>metrics</em>: for classification problems we set this as <em>accuracy</em>.</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-Python">opt_dict = {<span class="hljs-string">&apos;nadam&apos;</span>:Nadam,
+            <span class="hljs-string">&apos;adam&apos;</span>:Adam,
+            <span class="hljs-string">&apos;sgd&apos;</span>:SGD,
+            <span class="hljs-string">&apos;rmsprop&apos;</span>:RMSprop,
+            <span class="hljs-string">&apos;adadelta&apos;</span>:Adadelta,
+            <span class="hljs-string">&apos;adagrad&apos;</span>:Adagrad}
+</code></pre>
+<h4 id="fit">fit()</h4>
+<ul>
+<li>arguments:<ul>
+<li><em>x</em>: The input data, we defined it as <em>X</em> above. It contains the x and y coordinates of the input points</li>
+<li><em>y</em>: The class we&apos;re trying to predict: binary/multi</li>
+<li><em>verbose</em>: Prints out the loss and accuracy</li>
+<li><em>epochs</em>: Number of times to go over the training data</li>
+<li><em>batch_size</em>:  if 128, then 54000/128=421 times per epoch of GD</li>
+<li><em>validation_split</em>: 0.1</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">build_dropout_model</span><span class="hljs-params">()</span>:</span>
+  model = Sequential()
+  <span class="hljs-comment"># The input layer requires the special input_shape parameter which should match</span>
+  <span class="hljs-comment"># the shape of our training data.</span>
+  model.add(Dense(units=<span class="hljs-number">32</span>, activation=<span class="hljs-string">&apos;sigmoid&apos;</span>, input_shape=(image_vector_size,)))
+  model.add(Dropout(<span class="hljs-number">0.2</span>))
+  model.add(Dense(units=num_classes, activation=<span class="hljs-string">&apos;softmax&apos;</span>))
+  <span class="hljs-keyword">return</span> model
+</code></pre>
+<h4 id="dropout">Dropout()</h4>
+<ul>
+<li>Dropout acts as a regularisation method</li>
+<li>it randomly throws away neurons from the model during trainig with a rate r<ul>
+<li>r = 0.2    </li>
+</ul>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="notes_dl.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Basic of Deep Learning">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Keras","level":"1.4.6.2","depth":3,"next":{"title":"Shell","level":"1.5","depth":1,"ref":"","articles":[{"title":"Combo!","level":"1.5.1","depth":2,"path":"shell/combo.md","ref":"shell/combo.md","articles":[]},{"title":"HDFS & Shell","level":"1.5.2","depth":2,"path":"shell/hdfs_shell.md","ref":"shell/hdfs_shell.md","articles":[]}]},"previous":{"title":"Basic of Deep Learning","level":"1.4.6.1","depth":3,"path":"ml/dl/notes_dl.md","ref":"ml/dl/notes_dl.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ml/dl/keras.md","mtime":"2020-05-26T23:46:10.413Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-03T10:55:47.174Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -258,6 +258,90 @@
             
         </li>
     
+        <li class="chapter " data-level="1.4.3" data-path="../ml/feature_scaling.html">
+            
+                <a href="../ml/feature_scaling.html">
+            
+                    
+                    Scaling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../ml/methods.html">
+            
+                <a href="../ml/methods.html">
+            
+                    
+                    Methods
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../ml/regularisation.html">
+            
+                <a href="../ml/regularisation.html">
+            
+                    
+                    Regularisation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" >
+            
+                <span>
+            
+                    
+                    Deep Learning
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.6.1" data-path="../ml/dl/notes_dl.html">
+            
+                <a href="../ml/dl/notes_dl.html">
+            
+                    
+                    Basic of Deep Learning
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6.2" data-path="../ml/dl/keras.html">
+            
+                <a href="../ml/dl/keras.html">
+            
+                    
+                    Keras
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
             </ul>
             
@@ -370,8 +454,8 @@
 </li>
 </ol>
 <pre><code class="lang-python">df = (
-    spark.read.format(<span class="hljs-string">&quot;text&quot;</span>)
-    .load(<span class="hljs-string">&quot;hdfs:///data/msd/tasteprofile/mismatches/sid_msimatches.txt&quot;</span>)
+ spark.read.format(<span class="hljs-string">&quot;text&quot;</span>)
+ .load(<span class="hljs-string">&quot;hdfs:///data/msd/tasteprofile/mismatches/sid_msimatches.txt&quot;</span>)
 </code></pre>
 <p>&#x5B98;&#x65B9;&#x6587;&#x6863;&#x4E2D;&#x6709;&#x4E9B;option&#x4E0D;&#x5168;&#xFF0C;&#x6BD4;&#x5982;<code>.option(&quot;recursiveFileLookup&quot;, &quot;true&quot;)</code>&#x3002;&#x66F4;&#x591A;&#x4F8B;&#x5B50;&#x5982;&#x4E0B;&#xFF1A;</p>
 <p><a href="https://spark.apache.org/docs/latest/sql-data-sources-load-save-functions.html" target="_blank">Generic Load/Save Functions</a></p>
@@ -381,16 +465,18 @@
 <ol>
 <li>DDL-formatted string</li>
 </ol>
-<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>s = spark.read.schema(<span class="hljs-string">&quot;col0 STRING    , col1 DOUBLE&quot;</span>)
+<pre><code class="lang-python">s = spark.read.schema(<span class="hljs-string">&quot;col0 STRING    , col1 DOUBLE&quot;</span>)
 </code></pre>
 <ol>
 <li><a href="https://spark.apache.org/docs/latest/api/python/pyspark.sql.html#pyspark.sql.types.StructType" target="_blank"><code>pyspark.sql.types.StructType</code></a> object</li>
 </ol>
-<pre><code class="lang-python"><span class="hljs-meta">&gt;&gt;&gt; </span>s = (spark.read.schema(StructType([
-                                    StructField(<span class="hljs-string">&quot;col0&quot;</span>, StringType()),
-                  StructField(<span class="hljs-string">&quot;col1&quot;</span>, DoubleType())
-                  ])
-               ))
+<pre><code class="lang-python">s = (
+  spark.read.schema(
+    StructType([
+      StructField(<span class="hljs-string">&quot;col0&quot;</span>, StringType()),
+      StructField(<span class="hljs-string">&quot;col1&quot;</span>, DoubleType())
+    ])
+  ))
 </code></pre>
 <h4 id="build-schema-from-a-file">Build schema from a file</h4>
 <p><img src="../Users/neil/Library/Application Support/typora-user-images/image-20200514201711446.png" alt="image-20200514201711446"></p>
@@ -442,7 +528,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Load files","level":"1.2.1","depth":2,"next":{"title":"Create Dataframe","level":"1.2.2","depth":2,"path":"pyspark/create_dataframe.md","ref":"pyspark/create_dataframe.md","articles":[]},"previous":{"title":"PySpark","level":"1.2","depth":1,"path":"pyspark/README.md","ref":"pyspark/README.md","articles":[{"title":"Load files","level":"1.2.1","depth":2,"path":"pyspark/load_files.md","ref":"pyspark/load_files.md","articles":[]},{"title":"Create Dataframe","level":"1.2.2","depth":2,"path":"pyspark/create_dataframe.md","ref":"pyspark/create_dataframe.md","articles":[]},{"title":"Join","level":"1.2.3","depth":2,"path":"pyspark/join.md","ref":"pyspark/join.md","articles":[]},{"title":"Python Tricks","level":"1.2.4","depth":2,"path":"pyspark/python_trick.md","ref":"pyspark/python_trick.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pyspark/load_files.md","mtime":"2020-05-14T20:21:59.687Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-15T09:29:17.960Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Load files","level":"1.2.1","depth":2,"next":{"title":"Create Dataframe","level":"1.2.2","depth":2,"path":"pyspark/create_dataframe.md","ref":"pyspark/create_dataframe.md","articles":[]},"previous":{"title":"PySpark","level":"1.2","depth":1,"path":"pyspark/README.md","ref":"pyspark/README.md","articles":[{"title":"Load files","level":"1.2.1","depth":2,"path":"pyspark/load_files.md","ref":"pyspark/load_files.md","articles":[]},{"title":"Create Dataframe","level":"1.2.2","depth":2,"path":"pyspark/create_dataframe.md","ref":"pyspark/create_dataframe.md","articles":[]},{"title":"Join","level":"1.2.3","depth":2,"path":"pyspark/join.md","ref":"pyspark/join.md","articles":[]},{"title":"Python Tricks","level":"1.2.4","depth":2,"path":"pyspark/python_trick.md","ref":"pyspark/python_trick.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"pyspark/load_files.md","mtime":"2020-05-15T10:21:19.278Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-03T10:55:47.174Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

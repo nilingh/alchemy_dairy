@@ -22,8 +22,8 @@ df = spark.read.text("hdfs:///data/msd/tasteprofile/mismatches/sid_msimatches.tx
 
 ```python
 df = (
-    spark.read.format("text")
-    .load("hdfs:///data/msd/tasteprofile/mismatches/sid_msimatches.txt")
+ spark.read.format("text")
+ .load("hdfs:///data/msd/tasteprofile/mismatches/sid_msimatches.txt")
 ```
 
 官方文档中有些option不全，比如`.option("recursiveFileLookup", "true")`。更多例子如下：
@@ -41,17 +41,19 @@ df = (
 1. DDL-formatted string
 
 ```python
->>> s = spark.read.schema("col0 STRING	, col1 DOUBLE")
+s = spark.read.schema("col0 STRING	, col1 DOUBLE")
 ```
 
 2.  [`pyspark.sql.types.StructType`](https://spark.apache.org/docs/latest/api/python/pyspark.sql.html#pyspark.sql.types.StructType) object
 
 ```python
->>> s = (spark.read.schema(StructType([
-									StructField("col0", StringType()),
-                  StructField("col1", DoubleType())
-                  ])
-               ))
+s = (
+  spark.read.schema(
+    StructType([
+      StructField("col0", StringType()),
+      StructField("col1", DoubleType())
+    ])
+  ))
 ```
 
 
