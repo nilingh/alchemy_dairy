@@ -9,15 +9,15 @@
 
 **Rescaling**
 
-<img src="https://pic3.zhimg.com/50/v2-1874c0fd4801124ad29d6b2ff5d78d56_hd.jpg" data-caption="" data-size="normal" data-rawwidth="236" data-rawheight="79" data-default-watermark-src="https://pic4.zhimg.com/50/v2-575408e57fc4ce6d5c9f565efac34f70_hd.jpg" class="content_image" width="236"/>
+<img src="https://i.loli.net/2020/06/04/KjZ3Vg6eA9Mt5uJ.jpg" data-caption="" data-size="normal" data-rawwidth="236" data-rawheight="79" data-default-watermark-src="https://pic4.zhimg.com/50/v2-575408e57fc4ce6d5c9f565efac34f70_hd.jpg" class="content_image" width="236"/>
 
 **Mean normalization**
 
-<img src="https://pic4.zhimg.com/50/v2-1232fae014a02e150ed2b78e463a16ce_hd.jpg" data-caption="" data-size="normal" data-rawwidth="235" data-rawheight="75" data-default-watermark-src="https://pic3.zhimg.com/50/v2-fa2aad4069697e5339f0fb12b8834098_hd.jpg" class="content_image" width="235"/>
+<img src="https://i.loli.net/2020/06/04/MewUXlNIJGzADY9.jpg" data-caption="" data-size="normal" data-rawwidth="235" data-rawheight="75" data-default-watermark-src="https://pic3.zhimg.com/50/v2-fa2aad4069697e5339f0fb12b8834098_hd.jpg" class="content_image" width="235"/>
 
 **Standardization**
 
-<img src="https://pic2.zhimg.com/50/v2-9734f7841b544443b591bfbf54a7f041_hd.jpg" data-caption="" data-size="normal" data-rawwidth="103" data-rawheight="45" class="content_image" width="103"/>
+<img src="https://i.loli.net/2020/06/04/BtSKqH7JTEegxry.jpg" data-caption="" data-size="normal" data-rawwidth="103" data-rawheight="45" class="content_image" width="103"/>
 
 **Scaling to unit length**
 

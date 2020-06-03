@@ -12,7 +12,7 @@ Readings:
 
 
 
-![image-20200521143059325](/Users/neil/Library/Application Support/typora-user-images/image-20200521143059325.png)
+![image-20200521143059325](https://i.loli.net/2020/06/04/xdn2TKfF1IPHV6s.png)
 
 [ML landscape](http://vas3k.com) : Neural Nets & Deep Learning are sub-branches of ML.
 
@@ -29,7 +29,7 @@ Readings:
 * Activation Function $g(\Sigma(Inputs * Weights))$ 
 * Output is $\hat{y}$
 
-![image-20200521145235394](/Users/neil/Library/Application Support/typora-user-images/image-20200521145235394.png)
+![image-20200521145235394](https://i.loli.net/2020/06/04/ZYL8EjDowbyUf7C.png)
 
 ##### Neuro
 
@@ -42,16 +42,16 @@ Readings:
 
 * **may generate Non-Linearity** (for picking up complex pattern)
 
-![image-20200521145522284](/Users/neil/Library/Application Support/typora-user-images/image-20200521145522284.png)
+![image-20200521145522284](https://i.loli.net/2020/06/04/oMDJZCiztKaFHuR.png)
 
 #### Sigmoid
 
 * Binary classification
 * Linear boundry
 
-![image-20200521150631092](/Users/neil/Library/Application Support/typora-user-images/image-20200521150631092.png)
+![image-20200521150631092](https://i.loli.net/2020/06/04/FXAmsaTErVJ69dx.png)
 
-![image-20200521151244043](/Users/neil/Library/Application Support/typora-user-images/image-20200521151244043.png)
+![image-20200521151244043](https://i.loli.net/2020/06/04/JYFbhM7A8sz6xj1.png)
 
 
 
@@ -60,7 +60,7 @@ Readings:
 * Multiple outputs $[p_1, p_2, ..., p_n]$ for multi-class classification
 * Still linear boundary without hidden layers
 
-![image-20200521182526691](/Users/neil/Library/Application Support/typora-user-images/image-20200521182526691.png)
+![image-20200521182526691](https://i.loli.net/2020/06/04/3F1sfPrmld6BcoT.png)
 
 ### Multi-Layer Perceptron (MLP)
 
@@ -69,7 +69,7 @@ Readings:
 * Advantage over Simple Perceptron
 * Typical ReLu in hidden layers and Sigmoid in the last layer
 
-![image-20200521151824300](/Users/neil/Library/Application Support/typora-user-images/image-20200521151824300.png)
+![image-20200521151824300](https://i.loli.net/2020/06/04/nKHvOkfxIX5zwZY.png)
 
 Source [vas3k.com](http://vas3k.com)
 
@@ -88,7 +88,7 @@ Source [vas3k.com](http://vas3k.com)
 
 1. Two inputs
 
-![image-20200521170632032](/Users/neil/Library/Application Support/typora-user-images/image-20200521170632032.png)
+![image-20200521170632032](https://i.loli.net/2020/06/04/fKlERv1S5nJL26A.png)
 
 2. Calculated in three "neurons" with inputs, weights and biases
 
@@ -100,7 +100,7 @@ $h_3=g(W_{3,1}*x_1+W_{3,2}*x_2+b_3)$
 
 , which is calculated in matrix form **$[H]=g_1[A]$** is the results of hidden layer.
 
-![image-20200521172026601](/Users/neil/Library/Application Support/typora-user-images/image-20200521172026601.png)
+![image-20200521172026601](https://i.loli.net/2020/06/04/lg8Zxyknjv9c643.png)
 
 3. Second groups of three weights $W_i^2$ * the results of hidden layer $h_{i}$ + second bias $b^2$ was the **Input** of last "neuron"
 
